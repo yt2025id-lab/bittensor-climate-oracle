@@ -1,0 +1,5 @@
+bittensor
+fastapi
+uvicorn
+pydantic
+requests
