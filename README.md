@@ -1,4 +1,4 @@
-# Project 3: AI Climate Oracle
+# AI Climate Oracle
 
 ## Overview
 A decentralized AI-powered oracle for climate data and predictions, leveraging Bittensor subnets. Provides reliable, tamper-proof climate analytics for DeFi, insurance, and research.
