@@ -21,5 +21,8 @@ A decentralized AI-powered oracle for climate data and predictions, leveraging B
 ## License
 MIT
 
+## Subnet Design Proposal
+See [`SUBNET_PROPOSAL.md`](SUBNET_PROPOSAL.md) for the full technical subnet design proposal, including incentive mechanism, miner/validator design, business logic, and go-to-market strategy.
+
 ## Dokumentasi Lengkap & Overview
 Lihat folder `overview/overview.md` untuk penjelasan ide, alasan juara, dan eksekusi project secara detail.
