@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Climate Oracle Subnet -- Bittensor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="nav-logo">
+                <img src="/static/logo.png" alt="AI Climate Oracle Subnet" class="logo-img"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display:none;">
+                    <svg viewBox="0 0 48 48" width="40" height="40">
+                        <circle cx="24" cy="24" r="20" fill="none" stroke="#059669" stroke-width="2"/>
+                        <path d="M12 30 Q18 18 24 22 Q30 26 36 16" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="14" cy="14" r="3" fill="none" stroke="#34D399" stroke-width="1.5"/>
+                        <circle cx="34" cy="12" r="2" fill="#34D399" opacity="0.6"/>
+                        <path d="M20 34 L24 28 L28 34" fill="none" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="nav-title">
+                <h1>AI Climate Oracle <strong>Subnet</strong></h1>
+                <p>Decentralized Climate Prediction -- Powered by Bittensor & Yuma Consensus</p>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="subnet-badge">
+                <span class="live-dot"></span>
+                SUBNET #3 &bull; LIVE
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <div class="content-grid">
+
+            <!-- ===== LEFT PANEL: Demo Selector ===== -->
+            <div class="panel panel-input">
+                <div class="panel-header">
+                    <span class="panel-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2 Q16 8 12 12 Q8 16 12 22"/>
+                            <path d="M2 12 h20"/>
+                        </svg>
+                    </span>
+                    <h2>Subnet Demo Scripts</h2>
+                </div>
+
+                <!-- Demo Script 1 -->
+                <button class="demo-card active" id="btnDemo1" onclick="runDemo('demo1')">
+                    <div class="demo-card-top">
+                        <span class="demo-num">01</span>
+                        <span class="demo-task-badge">Short Term Forecast</span>
+                    </div>
+                    <div class="demo-card-title">7-Day Forecast -- Jakarta, Indonesia</div>
+                    <div class="demo-card-desc">Monsoon season peak, flooding risk elevated. 6 miners compete to predict temperature and precipitation.</div>
+                    <div class="demo-card-tags">
+                        <span class="demo-tag">MONSOON</span>
+                        <span class="demo-tag">LA NINA</span>
+                        <span class="demo-tag">FLOODING</span>
+                    </div>
+                </button>
+
+                <!-- Demo Script 2 -->
+                <button class="demo-card" id="btnDemo2" onclick="runDemo('demo2')">
+                    <div class="demo-card-top">
+                        <span class="demo-num">02</span>
+                        <span class="demo-task-badge task-risk">Risk Index</span>
+                    </div>
+                    <div class="demo-card-title">Extreme Weather Risk -- Miami, Florida</div>
+                    <div class="demo-card-desc">Hurricane season, storm surge modeling, coastal flood risk. Full multi-hazard risk assessment.</div>
+                    <div class="demo-card-tags">
+                        <span class="demo-tag">HURRICANE</span>
+                        <span class="demo-tag">STORM SURGE</span>
+                        <span class="demo-tag">CATEGORY 2</span>
+                    </div>
+                </button>
+
+                <!-- Demo Script 3 -->
+                <button class="demo-card" id="btnDemo3" onclick="runDemo('demo3')">
+                    <div class="demo-card-top">
+                        <span class="demo-num">03</span>
+                        <span class="demo-task-badge task-trend">Long Range Trend</span>
+                    </div>
+                    <div class="demo-card-title">90-Day Climate Trend -- Sahel, Africa</div>
+                    <div class="demo-card-desc">Drought monitoring, food security assessment, seasonal rainfall onset delay.</div>
+                    <div class="demo-card-tags">
+                        <span class="demo-tag">DROUGHT</span>
+                        <span class="demo-tag">FOOD SECURITY</span>
+                        <span class="demo-tag">ENSO</span>
+                    </div>
+                </button>
+
+                <div class="api-links">
+                    <a href="/docs" class="api-link">Swagger API</a>
+                    <a href="/redoc" class="api-link">ReDoc</a>
+                </div>
+            </div>
+
+            <!-- ===== RIGHT PANEL: Result ===== -->
+            <div class="panel panel-result">
+
+                <!-- Empty State -->
+                <div class="state-empty" id="stateEmpty">
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 80 80" width="64" height="64">
+                            <circle cx="40" cy="40" r="30" fill="none" stroke="#134e3a" stroke-width="2"/>
+                            <path d="M20 45 Q28 28 40 35 Q52 42 60 25" fill="none" stroke="#1a5e47" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="22" cy="22" r="5" fill="none" stroke="#1a5e47" stroke-width="1.5"/>
+                            <circle cx="58" cy="20" r="3" fill="#1a5e47" opacity="0.4"/>
+                            <path d="M35 55 L40 45 L45 55" fill="none" stroke="#134e3a" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <p class="empty-text">Select a demo script to broadcast a climate challenge to all miners on the subnet.</p>
+                    <p class="empty-text">Miners will compete to provide the most accurate weather predictions.</p>
+                    <p class="empty-text">Validators will verify every prediction against NOAA stations and satellite data.</p>
+                </div>
+
+                <!-- Loading State -->
+                <div class="state-loading" id="stateLoading" style="display:none;">
+                    <div class="loader-container">
+                        <div class="loader-icon">
+                            <svg viewBox="0 0 48 48" width="44" height="44" class="spin-slow">
+                                <circle cx="24" cy="24" r="20" fill="none" stroke="#059669" stroke-width="2"/>
+                                <path d="M12 28 Q18 18 24 22 Q30 26 36 16" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="24" r="4" fill="#34D399"/>
+                            </svg>
+                        </div>
+                        <div class="loader-text">
+                            <p class="loader-title">Broadcasting to subnet miners...</p>
+                            <div class="loader-steps" id="loaderSteps">
+                                <div class="loader-step active">
+                                    <span class="step-indicator"></span>
+                                    <span>Querying Bittensor subnet nodes...</span>
+                                </div>
+                                <div class="loader-step">
+                                    <span class="step-indicator"></span>
+                                    <span>Miners running climate prediction models...</span>
+                                </div>
+                                <div class="loader-step">
+                                    <span class="step-indicator"></span>
+                                    <span>Validators verifying against NOAA stations...</span>
+                                </div>
+                                <div class="loader-step">
+                                    <span class="step-indicator"></span>
+                                    <span>Reaching consensus &amp; distributing TAO...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loader-bar"><div class="loader-bar-fill" id="loaderBarFill"></div></div>
+                </div>
+
+                <!-- Result State -->
+                <div class="state-result" id="stateResult" style="display:none;"></div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
